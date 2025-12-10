@@ -3,76 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Links</title>
+    <title>ByTech - Links e Serviços</title>
     <style>
-        /* CSS Embutido para facilitar - Design Clean */
+        /* --- CONFIGURAÇÃO DO BANNER DE FUNDO --- */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            /* TROQUE O NOME ABAIXO PELO NOME DO SEU ARQUIVO DE BANNER */
+            background-image: url('BannerByTech.jpg');
+            background-size: cover;     /* Faz a imagem cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            background-attachment: fixed; /* O fundo fica fixo quando rola a página */
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh; /* Garante altura mínima da tela cheia */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* O "Cartão" branco onde fica o conteúdo */
+        .main-container {
+            background-color: rgba(255, 255, 255, 0.92); /* Branco com transparência (92%) */
+            padding: 40px 30px;
+            border-radius: 25px; /* Bordas bem arredondadas */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra suave para destacar do fundo */
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
-            margin: 0;
+            max-width: 450px;
+            width: 100%;
+            margin-top: 20px; /* Espaço no topo */
         }
 
+        /* --- CONFIGURAÇÃO DA FOTO DE PERFIL --- */
         .profile-img {
-            width: 100px;
-            height: 100px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
-            border: 3px solid #fff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            /* Borda branca grossa para destacar do fundo */
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        h1 { font-size: 1.5rem; margin-bottom: 10px; }
-        p { color: #666; margin-bottom: 30px; }
+        h1 { font-size: 1.8rem; margin-bottom: 5px; color: #222; text-align: center; }
+        p { color: #666; margin-bottom: 30px; text-align: center; font-weight: 500;}
 
         .link-container {
             width: 100%;
-            max-width: 400px;
             display: flex;
             flex-direction: column;
             gap: 15px;
+            margin-bottom: 30px;
         }
 
         .link-btn {
             background-color: #fff;
-            padding: 15px;
+            padding: 18px;
             text-align: center;
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            border-radius: 30px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 2px solid #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
 
         .link-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            background-color: #007bff; /* Cor do hover */
-            color: white;
-            border-color: #007bff;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+            border-color: #333;
+        }
+
+        /* Destaque para o botão do Menu */
+        .btn-destaque {
+            background-color: #222;
+            color: #fff;
+            border: 2px solid #222;
+        }
+        .btn-destaque:hover {
+            background-color: #444;
+            border-color: #444;
+            color: #fff;
+        }
+
+        /* Galeria de Imagens */
+        .gallery-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #444;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+             transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-    <img src="https://via.placeholder.com/150" alt="Sua Foto" class="profile-img">
+    <div class="main-container">
+        
+        <img src="PerfilByTech.jpg" alt="Logo ByTech" class="profile-img">
 
-    <h1>Seu Nome</h1>
-    <p>@seu_instagram • Criador de Conteúdo</p>
+        <h1>ByTech Store</h1>
+        <p>Soluções em Tecnologia e Serviços</p>
 
-    <div class="link-container">
-        <a href="https://whatsapp.com" class="link-btn" target="_blank">Fale no WhatsApp</a>
-        <a href="https://youtube.com" class="link-btn" target="_blank">Meu Canal no YouTube</a>
-        <a href="https://seu-site.com" class="link-btn" target="_blank">Visite meu Site</a>
-        <a href="mailto:seu@email.com" class="link-btn">Entre em Contato</a>
-    </div>
+        <div class="link-container">
+            <a href="menu.pdf" class="link-btn btn-destaque" target="_blank">
+                📄 Baixar Menu de Serviços
+            </a>
 
-</body>
+            <a href="https://wa.me/5500000000000" class="link-btn" target="_blank">
+                💬 Fale no WhatsApp
+            </a>
+        </div>
+
+        <h2 class="gallery-title">Nossos Trabalhos</h2>
+        <div class="gallery">
+            <img src="foto1.jpg" alt="Serviço 1">
+            <img src="foto2.jpg" alt="Serviço 2">
+        </div>
+
+    </div> </body>
 </html>
