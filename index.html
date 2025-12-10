@@ -8,14 +8,14 @@
         /* --- CONFIGURAÇÃO DO BANNER DE FUNDO --- */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            /* TROQUE O NOME ABAIXO PELO NOME DO SEU ARQUIVO DE BANNER */
-            background-image: url('BannerByTech.jpg');
-            background-size: cover;     /* Faz a imagem cobrir toda a tela */
-            background-position: center; /* Centraliza a imagem */
-            background-attachment: fixed; /* O fundo fica fixo quando rola a página */
+            /* 👇 COLOQUE O NOME DO SEU BANNER AQUI EMBAIXO 👇 */
+            background-image: url('BannerByTech.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             margin: 0;
             padding: 20px;
-            min-height: 100vh; /* Garante altura mínima da tela cheia */
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,16 +23,15 @@
 
         /* O "Cartão" branco onde fica o conteúdo */
         .main-container {
-            background-color: rgba(255, 255, 255, 0.92); /* Branco com transparência (92%) */
+            background-color: rgba(255, 255, 255, 0.92);
             padding: 40px 30px;
-            border-radius: 25px; /* Bordas bem arredondadas */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra suave para destacar do fundo */
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 450px;
+            max-width: 400px; /* Largura ajustada para ficar mais elegante sem as fotos */
             width: 100%;
-            margin-top: 20px; /* Espaço no topo */
         }
 
         /* --- CONFIGURAÇÃO DA FOTO DE PERFIL --- */
@@ -42,7 +41,6 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
-            /* Borda branca grossa para destacar do fundo */
             border: 5px solid #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
@@ -55,7 +53,7 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 10px; /* Margem reduzida pois não tem mais nada embaixo */
         }
 
         .link-btn {
@@ -92,36 +90,6 @@
             border-color: #444;
             color: #fff;
         }
-
-        /* Galeria de Imagens */
-        .gallery-title {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #444;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            width: 100%;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        .gallery img:hover {
-             transform: scale(1.05);
-        }
     </style>
 </head>
 <body>
@@ -138,16 +106,12 @@
                 📄 Baixar Menu de Serviços
             </a>
 
-            <a href="https://wa.me/5500000000000" class="link-btn" target="_blank">
+            <a href="https://wa.me/+5582994165240" class="link-btn" target="_blank">
                 💬 Fale no WhatsApp
             </a>
         </div>
 
-        <h2 class="gallery-title">Nossos Trabalhos</h2>
-        <div class="gallery">
-            <img src="foto1.jpg" alt="Serviço 1">
-            <img src="foto2.jpg" alt="Serviço 2">
-        </div>
+    </div>
 
-    </div> </body>
+</body>
 </html>
